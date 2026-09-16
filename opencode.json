@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    "CROSS-IDE.md",
+    ".memory/index.md"
+  ],
+  "permission": {
+    "*": "allow"
+  }
+}

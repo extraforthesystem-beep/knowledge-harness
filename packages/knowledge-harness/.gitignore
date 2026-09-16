@@ -1,0 +1,7 @@
+# Built by npm run bundle — safe to commit for git-based npx installs
+/assets/
+
+# Accidental project install from wrong cwd
+/.cursor/
+/opencode.json
+/scripts/

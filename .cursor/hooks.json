@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "node .cursor/hooks/inject-context.js"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "node .cursor/hooks/capture-decisions.js"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "node .cursor/hooks/capture-decisions.js"
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": "node .cursor/hooks/capture-decisions.js"
+      }
+    ],
+    "stop": [
+      {
+        "command": "node .cursor/hooks/sync-memory.js"
+      }
+    ]
+  }
+}

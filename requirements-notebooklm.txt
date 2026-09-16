@@ -1,0 +1,7 @@
+# Project Python deps for NotebookLM CLI + research scripts.
+# Create venv:  python3 -m venv .venv && source .venv/bin/activate
+# Install:      pip install -r requirements-notebooklm.txt
+# Then:         playwright install chromium   # if login uses bundled browser
+
+notebooklm-py[browser]>=0.7.3
+curl_cffi>=0.7.0

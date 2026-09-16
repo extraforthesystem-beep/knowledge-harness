@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+.git/
+*.log
+coverage/
+.env*
+*.min.js
+*.min.css
+graphify-out/graph.json
+.memory/viz.html
+.memory/session-journal.jsonl
+.memory/_legacy/
+.memory/.viz-staging/

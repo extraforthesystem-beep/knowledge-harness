@@ -1,0 +1,11 @@
+ts	system	layer	benchmark	metric	value	unit	latency	inject_tokens	cost	source	reproduced	notes
+2026-09-07T13:56:51Z	knowledge-harness	project-memory	local-inject	session_inject_tokens	766	tokens	mean 42.47ms	~766 (budget <500)	$0 local	scripts/benchmark-harness.py (measured)	yes	OKF .memory/ spine — not LongMemEval retrieval; pair with claude-mem OR agentmemory for semantic recall
+2026-09-07T13:56:51Z	agentmemory (BM25+Vector)	session-recall	LongMemEval-S	R@5	95.2	pct	~hook / MCP	~1900/session (budgeted)	$0 local emb / ~$10/yr API	rohitg00/agentmemory benchmark/COMPARISON.md	no	own harness; all-MiniLM-L6-v2; retrieval-only
+2026-09-07T13:56:51Z	agentmemory (BM25-only)	session-recall	LongMemEval-S	R@5	86.2	pct	local	top-K only	$0	rohitg00/agentmemory benchmark/LONGMEMEVAL.md	no	fallback without embeddings
+2026-09-07T13:56:51Z	MemPalace	session-recall	LongMemEval-S	R@5	~96.6	pct	vector	n/a	$0 OSS	vendor via agentmemory COMPARISON.md	no	self-reported; no hooks/MCP surface
+2026-09-07T13:56:51Z	Letta / MemGPT	agent-runtime	LoCoMo	QA acc	83.2 / 74.0	pct	model-dep	tiered paging	runtime + LLM	vendor / Letta filesystem blog	no	83.2 vendor-cited; Letta FS agent 74.0 GPT-4o-mini
+2026-09-07T13:56:51Z	Mem0 (base)	memory-API	LoCoMo	QA acc	66.9	pct	p95 ~1.44s	~1.8–2K/conv	cloud or self-host + LLM extract	mem0.ai blog / arXiv 2504.19413	no	extraction-based; independent reruns vary
+2026-09-07T13:56:51Z	Mem0g (graph)	memory-API	LoCoMo	QA acc	68.5	pct	p95 ~2.59s	~4K/conv	often Pro-tier	mem0.ai blog	no	graph variant; not LongMemEval
+2026-09-07T13:56:51Z	claude-mem	session-recall	—	progressive disclosure	~10x vs full history	ratio	hook	L1 50–100 / L2 500–1K	~$60–180/yr (survey)	cc.bruniaux.com memory-systems guide	no	Claude Code plugin; no public LongMemEval number
+2026-09-07T13:56:51Z	Built-in CLAUDE.md / MEMORY.md	native	scale anecdote	inject tokens @240 obs	22000+	tokens	0 (always-on)	full file every session	$0 infra	agentmemory README comparison	no	200-line / 25KB caps; no selective retrieval
+2026-09-07T13:56:51Z	Full conversation paste	baseline	token cost	tokens/year (heavy use)	19500000+	tokens	n/a	all history	impossible at scale	agentmemory COMPARISON.md	no	exceeds context after ~200 observations

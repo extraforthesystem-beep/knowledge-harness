@@ -1,0 +1,40 @@
+{
+  "name": "knowledge-harness",
+  "version": "0.3.0",
+  "description": "Cross-IDE Knowledge Harness installer — slash commands, hooks, and OKF .memory/ for Cursor, Claude Code, Antigravity, OpenCode",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "knowledge-harness": "./bin/knowledge-harness.js",
+    "kh": "./bin/knowledge-harness.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "assets"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ai-agents",
+    "cursor",
+    "claude-code",
+    "opencode",
+    "antigravity",
+    "agent-skills",
+    "memory",
+    "okf",
+    "slash-commands",
+    "harness"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/extraforthesystem-beep/knowledge-harness.git",
+    "directory": "packages/knowledge-harness"
+  },
+  "scripts": {
+    "bundle": "node scripts/bundle-assets.mjs",
+    "prepublishOnly": "node scripts/bundle-assets.mjs"
+  }
+}

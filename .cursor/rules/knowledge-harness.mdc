@@ -1,0 +1,15 @@
+---
+description: Knowledge Harness router — read .memory/index.md first, use graphify for code, harness-sync after work.
+alwaysApply: true
+---
+
+# Knowledge Harness (Cursor)
+
+This project uses the OKF-native Knowledge Harness. Follow [AGENTS.md](../AGENTS.md) for the full router.
+
+**Start:** `.memory/index.md` → `.memory/progress/status.md` → `.memory/context/project.md`
+**Authority:** challenge before overriding hard truth — [.memory/meta/memory-authority.md](../.memory/meta/memory-authority.md)
+**Code:** `/graphify query` before grep; writing code → `.memory/meta/lazy-code.md` (caveman prose, ponytail code)
+**End:** `/memory-sync` (or let session-end hook run harness-sync)
+
+**Daily cmds:** `/feature-add` · `/memory-sync` · **One-time:** `/memory-migrate`

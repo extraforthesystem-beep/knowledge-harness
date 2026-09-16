@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.Python
+.notebooklm-run/
+.tmp-nlm-*.json
+.DS_Store
+.memory/.last-sync
+.memory/.adr-snap/
+.memory/session-journal.jsonl
+.memory/progress/unsummarized.md
+.memory/.viz-staging/
+.memory/**/*.bak
+token-usage-output.txt

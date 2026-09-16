@@ -1,0 +1,19 @@
+# .graphifyignore
+# Prevents context bloat and optimizes token usage during Graphify processing.
+
+node_modules/
+dist/
+build/
+.git/
+.env*
+coverage/
+*.log
+tmp/
+scratch/
+.claude/
+.agents/
+.gemini/
+.cursor/
+.memory/
+graphify-out/
+.memory/.viz-staging/
