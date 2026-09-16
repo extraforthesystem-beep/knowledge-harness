@@ -16,7 +16,7 @@ Inject/sync hygiene + ADR hook lock + clutter delete. GitHub remote next; npm pu
 
 
 ## Active branch
-Not set (will sync to GitHub later)
+`main` — https://github.com/extraforthesystem-beep/knowledge-harness
 
 ## Last updated
 2026-09-07 14:03:42
